@@ -12,4 +12,4 @@
 */
 
 Route::get('/', 'PagesController@home');
-Route::get('/acerca', 'PagesController@about');
+

@@ -8,18 +8,30 @@ class PagesController extends Controller
 {
     public function home ()
     {
-    	$links['https://laravel.com/docs'] ='Documentation';
-	    $links['https://laracasts.com'] ='Laracasts';
-	    $links['https://laravel-news.com'] ='News';
-	    $links['https://forge.laravel.com'] ='Forge';
-	    $links['https://github.com/laravel/laravel'] ='GitHub';
-	    $links['https://about.me/idanibat'] = 'Isaac Batista';
-	    $teacher = 'Guido Contreras Woda';
-	    return view('welcome', compact('links', 'teacher'));
+    	$messages = [
+            [
+                'id' => 1,
+                'content' => 'Este es mi primer mensaje',
+                'image'   => 'http://lorempixel.com/600/338?1',
+            ],
+            [
+                'id' => 2,
+                'content' => 'Otro mensaje mas',
+                'image'   => 'http://lorempixel.com/600/338?2',
+            ],
+            [
+                'id' => 3,
+                'content' => 'Mi tercer mensaje',
+                'image'   => 'http://lorempixel.com/600/338?3',
+            ],
+            [
+                'id' => 4,
+                'content' => 'El ultimo',
+                'image'   => 'http://lorempixel.com/600/338?4',
+            ],
+        ];
+	    
+	    return view('welcome', ['messages' => $messages]);
     }
 
-    public function about ()
-    {
-    	return view('about');
-    }
 }

@@ -11,4 +11,10 @@ class MessagesController extends Controller
     {
     	return view('messages.show', compact('message'));
     }
+
+    public function create (Request $request)
+    {
+    	dd($request->all());
+    	return 'Creado!!';
+    }
 }

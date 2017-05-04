@@ -15,6 +15,13 @@
             {{ csrf_field() }}
             <div class="form-group">
                 <input class="form-control" name="message" placeholder="Que estás pensando?">
+                @if ($errors->any())
+                    @foreach ($errors->get('message') as $error)
+                        <div>
+                            {{$error}}
+                        </div>
+                    @endforeach
+                @endif
             </div>
         </form>
     </div>

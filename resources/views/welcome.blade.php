@@ -17,7 +17,7 @@
                 <input class="form-control" name="message" placeholder="Que estás pensando?">
                 @if ($errors->has('message'))
                     @foreach ($errors->get('message') as $error)
-                        <div class="form-controll-feedback">
+                        <div class="form-control-feedback">
                             {{$error}}
                         </div>
                     @endforeach

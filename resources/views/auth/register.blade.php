@@ -19,6 +19,17 @@
                             @endif
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label for="username" class="col-md-4 form-control-label" >Username</label>
+                        <div class="col-md-6">
+                            <input type="text" id="username" class="form-control" name="username" value="{{ old('username') }}">
+                        </div>
+                        @if ($errors->has('username'))
+                            <span class="form-control-feedback">
+                                <strong>{{ $errors->first('username') }}</strong>
+                            </span>
+                        @endif
+                    </div>
                     <div class="form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
                         <label for="email" class="col-md-4 form-control-label">E-Mail Address</label>
                         <div class="col-md-6">

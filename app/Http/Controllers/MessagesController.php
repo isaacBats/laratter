@@ -15,9 +15,11 @@ class MessagesController extends Controller
 
     public function create (CreateMessageRequest $request)
     {	
-    	$message = Message::create([
+    	$user = $request->user();
+        $message = Message::create([
     		'content' => $request->input('message'),
-    		'image' => 'http://lorempixel.com/600/338?' . mt_rand(0,1000)
+    		'image' => 'http://lorempixel.com/600/338?' . mt_rand(0,1000),
+            'user_id' => $user->id,
     	]);
     	
     	return redirect('/messages/' . $message->id);

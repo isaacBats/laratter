@@ -9,7 +9,26 @@ class UsersController extends Controller
 {
     public function show ($username)
     {
-    	$user = User::where('username', $username)->first();
+    	$user = $this->findByUsername($username);
     	return view('users.show', compact('user'));
+    }
+
+    public function follows ($username) 
+    {
+        $user = $this->findByUsername($username);
+        return view('users.follows', compact('user'));
+    }
+
+    public function follow ($username, Request $request) 
+    {
+    	$user = $this->findByUsername($username);
+        $me = $request->user();
+        $me->follows()->attach($user);
+        return redirect("/$username")->withSuccess('Usuario seguido!');
+    }
+
+    private function findByUsername($username)
+    {
+        return  User::where('username', $username)->first();
     }
 }

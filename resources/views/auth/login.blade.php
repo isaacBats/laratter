@@ -53,8 +53,13 @@
                         </div>
                     </div>
                 </form>
+                <div class="offset-md-4">
+                    <a href="/auth/facebook" class="btn btn-primary">Login con facebook</a>
+                </div>
             </div>
         </div>
     </div>
+</div>
+<div class="row">
 </div>
 @endsection

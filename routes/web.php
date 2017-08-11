@@ -13,13 +13,20 @@
 
 Route::get('/', 'PagesController@home');
 Route::get('/messages/{message}', 'MessagesController@show');
-Route::post('/messages/create', 'MessagesController@create')->middleware('auth');
 Auth::routes();
 Route::get('/auth/facebook', 'SocialAuthController@facebook');
 Route::get('/auth/facebook/callback', 'SocialAuthController@callback');
 Route::post('/auth/facebook/register', 'SocialAuthController@register');
+Route::get('/home', 'HomeController@index');
+// Rutas privadas
+Route::group(['middleware' => 'auth'], function() {
+  Route::post('/{username}/dms', 'UsersController@sendPrivateMessage');
+  Route::post('/messages/create', 'MessagesController@create');
+  Route::post('/{username}/follow', 'UsersController@follow');
+  Route::post('/{username}/unfollow', 'UsersController@unfollow');
+  Route::get('/conversations/{conversation}', 'UsersController@showConversation');
+});
+
 Route::get('/{username}/follows', 'UsersController@follows');
 Route::get('/{username}/followers', 'UsersController@followers');
-Route::post('/{username}/follow', 'UsersController@follow');
-Route::post('/{username}/unfollow', 'UsersController@unfollow');
 Route::get('/{username}', 'UsersController@show');

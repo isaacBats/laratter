@@ -172,7 +172,16 @@ return [
          * Package Service Providers Socials...
          */
         Laravel\Socialite\SocialiteServiceProvider::class,
+        
+        /*
+         * BarDebug
+         */
         Barryvdh\Debugbar\ServiceProvider::class,
+
+        /*
+         *
+         */
+        Laravel\Scout\ScoutServiceProvider::class,
 
         /*
          * Application Service Providers...

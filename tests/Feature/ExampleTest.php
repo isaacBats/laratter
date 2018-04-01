@@ -16,8 +16,18 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
+        // Arrange | Preparacion
+        // Act | Acción
+        // Assert | Verificación
+
         $response = $this->get('/');
 
         $response->assertStatus(200);
+    }
+
+    public function testCanSearchForMessage()
+    {
+        $response = $this->get('/messages?query=Alice');
+        $response->assertSee('Alice');
     }
 }

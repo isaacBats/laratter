@@ -12,7 +12,7 @@
 
     <!-- Styles -->
     <!-- CSS Bootstrab -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" href="{{ mix('css/app.css') }}">
 
     <!-- Scripts -->
     <script>
@@ -23,7 +23,7 @@
 </head>
 <body>
     <div id="app" class="container">
-        <nav class="navbar navbar-light static-top navbar-toggleable-md bg-faded">
+        <nav class="navbar navbar-light static-top navbar-expand-md bg-light">
             <div class="container">
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -77,7 +77,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>

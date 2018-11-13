@@ -10,7 +10,8 @@
         "laravel/framework": "5.4.*",
         "laravel/scout": "^4.0",
         "laravel/socialite": "^3.0",
-        "laravel/tinker": "~1.0"
+        "laravel/tinker": "~1.0",
+        "pusher/pusher-php-server": "^3.2"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "v2.4.3",

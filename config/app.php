@@ -188,7 +188,7 @@ return [
          */
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
+        App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
@@ -244,6 +244,7 @@ return [
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Pusher' => Pusher\Pusher::class,
 
     ],
 

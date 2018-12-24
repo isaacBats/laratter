@@ -176,7 +176,7 @@ return [
         /*
          * BarDebug
          */
-        Barryvdh\Debugbar\ServiceProvider::class,
+        // Barryvdh\Debugbar\ServiceProvider::class,
 
         /*
          *
@@ -243,7 +243,7 @@ return [
         // Socialite
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
-        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        // 'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'Pusher' => Pusher\Pusher::class,
 
     ],
